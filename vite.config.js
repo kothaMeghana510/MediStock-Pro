@@ -5,5 +5,5 @@ import eslint from 'vite-plugin-eslint'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), eslint()],
-  base:'/MediStock-Pro/'
+  base:process.env.NODE_ENV === 'production' ? '/MediStock-Pro/' : '/'
 })
