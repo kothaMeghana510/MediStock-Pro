@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .active-link{
+        @apply bg-active border-l-4 border-activeBorder rounded-md;
+    }
+}
