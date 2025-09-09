@@ -34,7 +34,7 @@ function App() {
             <AppLayout />
           </ProtectedRoute >
           }>
-         <Route index element={<Navigate replace to = "Home" />}/>
+         <Route index element={<Navigate replace to = "home" />}/>
           <Route path="home" element={<Home />}/>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="add-stock" element={<AddStock />}/>
