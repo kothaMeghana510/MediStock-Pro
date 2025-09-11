@@ -18,7 +18,7 @@ A Web-based inventory managemnet system built as a personal project for Medical 
 - **Supabase** - backend as a service [database, authenticatioon etc.]
 - **Tailwind CSS** - styling framework for clean and responsive UI
 - **Recharts** - Charts and Graphs for better data visualization
-- **React Toastify* - For showing notifications
+- **React Toastify** - For showing notifications
 
 ## Problem it Solves
 Managing stock manually can lead to mistakes, expired medicines and financial loss. This projec helps solve those problems by: 
