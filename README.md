@@ -1,6 +1,6 @@
 # MEDISTOCK PRO
 
-A Web-based inventory managemnet system built as a personal project for Medical shops  to track Pending Orders, Received Stocks, Returnsand Stock Expiry. Designed for internal use, this project simplifies managing stocks and helps pervent wastage due to expired medicines.
+A Web-based inventory managemnet system built as a personal project for Medical shops to track Pending Orders, Received Stocks, Returns and Stock Expiry. Designed for internal use, this project simplifies managing stocks and helps pervent wastage due to expired medicines.
 
 ## Features
 - Add, review and manage pending orders
@@ -17,12 +17,13 @@ A Web-based inventory managemnet system built as a personal project for Medical 
 - **React Query** - efficient data feching and state management
 - **Supabase** - backend as a service [database, authenticatioon etc.]
 - **Tailwind CSS** - styling framework for clean and responsive UI
-- **REcharts** - Charts and Graphs for better data visualization
+- **Recharts** - Charts and Graphs for better data visualization
+- **React Toastify* - For showing notifications
 
 ## Problem it Solves
 Managing stock manually can lead to mistakes, expired medicines and financial loss. This projec helps solve those problems by: 
 
-- Tracking received stocks, pending ordres and returns in one place.
+- Tracking received stocks, pending orders and returns in one place.
 - Alerting the shop owner when medicines are near expiry or already expired.
 - Providing useful visual charts and stats to monitor stock at a glance.
 
