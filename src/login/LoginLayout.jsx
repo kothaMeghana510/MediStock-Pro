@@ -35,7 +35,7 @@ function LoginLayout() {
 
                 <div className="flex flex-col gap-2 mb-2">
                     <label htmlFor="password" className="text-lg text-stone-600 px-1">Password:</label>
-                    <input type="text" 
+                    <input type="password" 
                            id="password"
                            value={password}
                            onChange={(e) => setPassword(e.target.value)}
