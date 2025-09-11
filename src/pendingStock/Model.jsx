@@ -1,15 +1,18 @@
-//import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { insertStocks } from "../services/apiReceivedStock";
-import toast from "react-hot-toast";
 import useDeleteStock from "./useDeleteStock";
+
+import toast from "react-hot-toast";
 
 
 function Model({stocksToRecieve = {}, setShowModel}) {
     const [currentId, setCurrentId] = useState(0)
     const [savedMedicine, setSavedMedicine] = useState([]);
+    const navigate = useNavigate();
     
     const {...receivedValues} = stocksToRecieve;
     const { register, reset, handleSubmit, formState } = useForm({defaultValues: receivedValues[currentId]});
@@ -54,6 +57,7 @@ async function handleFinalSubmit(data) {
       await Promise.all(stocksToRecieve.map((stock) => deletingStock(stock.id)));
       reset();
       setShowModel(false);
+      navigate('/home')
     }
   });
 }

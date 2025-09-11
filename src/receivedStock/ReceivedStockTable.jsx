@@ -7,7 +7,7 @@ import useReceivedStock from "./useReceivedStock";
 function ReceivedStockTable({dashboardStocks}) {
     const [showReturnForm, setShowReturnForm] = useState(false);
     const [returnStock, setReturnStock] = useState(null);
-    const { finalStocks, lengthOfNearExpiry} = useReceivedStock({dashboardStocks});
+    const { finalStocks, lengthOfNearExpiry, expiredLen} = useReceivedStock({dashboardStocks});
    
     if(!dashboardStocks || dashboardStocks?.length === 0 ) {
       return <Empty  /> 
@@ -17,7 +17,11 @@ function ReceivedStockTable({dashboardStocks}) {
 
         return (
           <>
-          {(lengthOfNearExpiry) ? <h2 className="font-semibold text-red-600 bg-red-300 border-l-4 rounded-md px-4 py-2 border-red-600 mr-auto ml-5 text-lg bg-">{`${lengthOfNearExpiry} Medicines are near to Expire`}</h2>: ""}
+          {/* {(lengthOfNearExpiry) ? <h2 className="font-semibold text-red-600 bg-red-300 border-l-4 rounded-md px-4 py-2 border-red-600 mr-auto ml-5 text-lg animate-pulse duration-1000 ">{`${lengthOfNearExpiry} Medicines are near to Expire`}</h2>: ""} */}
+          <div className="flex gap-5 text-[16px] mt-2 font-bold animate-pulse duration-1000">
+            <span className="bg-red-300 text-red-600 px-2 py-1 rounded-md">{`🔴 Expired = ${expiredLen}`}</span> 
+            <span className="bg-orange-300 text-orange-600 px-2 py-1 rounded-md">{`🟠 Near to Expiry = ${lengthOfNearExpiry}`}</span>
+          </div>
             <table className="min-w-full m-10 mt-8 table-fixed border-collapse border border-gray-100">
             <thead>
             <tr className="uppercase h-10  bg-active font-semibold">

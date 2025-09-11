@@ -15,27 +15,11 @@ export default function  useReceivedStock({dashboardStocks = []}) {
     if(filterValue === 'Others') filteredStock = dashboardStocks.filter((stock) => stock.category === "Others");
 
 
-  //   function getNearToExpiry(expiry) {
-  //   const today = new Date();
-  //   const expiryDate = new Date(expiry);
-  //   // const diffTime = expiryDate - today;
-  //   // return Math.ceil(diffTime / (1000 * 60 * 60 *24));
-
-  //   const utcToday = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
-  //   const utcExpiry = Date.UTC(expiryDate.getFullYear(), expiryDate.getMonth(), expiryDate.getDate());
-
-  //   const diffDays = Math.floor((utcExpiry - utcToday) / (1000 * 60 * 60 * 24));
-  //   return diffDays;
-  // }
-
-
 function getNearToExpiry(expiry) {
     const today = new Date();
-    // Reset today's time to 00:00:00
     today.setHours(0, 0, 0, 0);
 
     const expiryDate = new Date(expiry);
-    // Reset expiry date time to 00:00:00
     expiryDate.setHours(0, 0, 0, 0);
 
     const diffTime = expiryDate - today; // difference in milliseconds
@@ -57,6 +41,9 @@ const stocksWithDays = filteredStock.map((stock) => {
   const nearExpiry = stocksWithDays.filter((stock) => stock.daysLeft <= 30 && stock.daysLeft > 0);
   const lengthOfNearExpiry = nearExpiry.length;
 
+  const expired = stocksWithDays.filter((stock) => stock.daysLeft <= 0);
+  const expiredLen = expired?.length;
+
   // Filter By Expiry Date
   const DateValue = searchParams.get('date') || 'none';
   let finalStocks = stocksWithDays;
@@ -71,6 +58,6 @@ const stocksWithDays = filteredStock.map((stock) => {
         finalStocks = stocksWithDays.filter((stock) => stock.daysLeft <= 0);
     }
 
-    return {stocksWithDays, lengthOfNearExpiry, finalStocks, getNearToExpiry}
+    return {stocksWithDays, lengthOfNearExpiry, finalStocks, getNearToExpiry, expiredLen}
 
 }

@@ -23,12 +23,14 @@ function ReceivedStockRow({dashboardStock, index, setShowReturnForm, showReturnF
             <td className="px-4 py-2 text-center font-semibold uppercase text-lg">{medicineName}<span className=" text-stone-400 flex justify-center text-sm">{category}</span></td>
             <td className="px-4 py-2 text-center text-lg">{quantity}</td>
             <td className="px-4 py-2 text-center font-semibold text-green-600 text-lg">{amount} ₹</td>
-            <td className={`px-4 py-2 text-center font-semibold text-lg`}><span className={`${isExpiringSoon || alreadyExpired ? "bg-red-300 text-red-600  font-semibold rounded-xl px-2 py-1" : "bg-green-300 rounded-xl px-2 py-1 text-green-600"}`}>{formattedExpiryDate}</span>{isExpiringSoon ? <span className="flex justify-center text-red-400 font-semibold text-sm uppercase">{`${daysLeft} ${daysLeft===1 ? "day Left" : "days Left"}`}</span> : ""}</td>
+            {/* <td className={`px-4 py-2 text-center font-semibold text-lg`}><span className={`${isExpiringSoon || alreadyExpired ? "bg-red-300 text-red-600  font-semibold rounded-xl px-2 py-1" : "bg-green-300 rounded-xl px-2 py-1 text-green-600"}`}>{formattedExpiryDate}</span>{isExpiringSoon ? <span className="flex justify-center text-red-400 font-semibold text-sm uppercase">{`${daysLeft} ${daysLeft===1 ? "day Left" : "days Left"}`}</span> : ""}</td> */}
+            <td className={`px-4 py-2 text-center font-semibold text-lg`}><span className={` font-semibold rounded-xl px-2 py-1 ${alreadyExpired ? "bg-red-300 text-red-600" : isExpiringSoon  ? "bg-orange-300 text-orange-600 " : "bg-green-300  text-green-600"}` }>{formattedExpiryDate}</span>{isExpiringSoon ? <span className="flex justify-center text-orange-400 font-semibold text-sm uppercase">{`${daysLeft} ${daysLeft===1 ? "day Left" : "days Left"}`}</span> : ""}</td>
+
             <td className="px-4 py-2 text-center text-gray-500">{batchNo ? batchNo : "-"}</td>
             <td>
                 
             <button className="px-4 py-2  text-center " onClick={() => deletingStockReceived(id)}><HiOutlineTrash /></button>
-            {(alreadyExpired) ? "" : <button onClick={() => returnForm(dashboardStock)} className="px-2 py-1 text-center bg-activeBorder  text-white rounded-lg">Add to Returns</button>}
+            {(alreadyExpired) ? <span className="px-2 py-1 text-center bg-red-600 text-lg text-white rounded-lg">Expired</span> : <button onClick={() => returnForm(dashboardStock)} className="px-2 py-1 text-center bg-activeBorder  text-white rounded-lg">Add to Returns</button>}
             </td>
         </tr>
             </>

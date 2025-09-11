@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import DraftStock from "./DraftStock";
 import useCreateNewStock from "./useCreateNewStock";
 
@@ -6,9 +7,11 @@ import useCreateNewStock from "./useCreateNewStock";
 // for review  and also helps to save data in data base
 function ReviewStock({drafts, setDrafts}) {
     const {isCreacting, mutate} = useCreateNewStock();
+    const navigate = useNavigate();
 
     function handleSave(drafts) {
         mutate(drafts);
+        navigate('/pending-orders');
     }
 
     function onCancel() {

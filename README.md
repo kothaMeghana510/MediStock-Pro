@@ -1,8 +1,29 @@
-# React + Vite
+# MEDISTOCK PRO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Web-based inventory managemnet system built as a personal project for Medical shops  to track Pending Orders, Received Stocks, Returnsand Stock Expiry. Designed for internal use, this project simplifies managing stocks and helps pervent wastage due to expired medicines.
 
-Currently, two official plugins are available:
+## Features
+- Add, review and manage pending orders
+- Record received stocks
+- Monitor returns and damaged stocks
+- Alert for expired and near-to-expiry medicines with color coded indicators
+- Dashboard displaying received, pending and returned stocks with insightful charts
+- login using supabase authentication
+- Toast notifications for important actions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React** - for building the user interface
+- **Vite** - fast development build tool
+- **React Query** - efficient data feching and state management
+- **Supabase** - backend as a service [database, authenticatioon etc.]
+- **Tailwind CSS** - styling framework for clean and responsive UI
+- **REcharts** - Charts and Graphs for better data visualization
+
+## Problem it Solves
+Managing stock manually can lead to mistakes, expired medicines and financial loss. This projec helps solve those problems by: 
+
+- Tracking received stocks, pending ordres and returns in one place.
+- Alerting the shop owner when medicines are near expiry or already expired.
+- Providing useful visual charts and stats to monitor stock at a glance.
+
+It's designed to simplfy stock management and reduce wastage, helping medical shops operate smoothly.
