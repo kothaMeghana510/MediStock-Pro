@@ -3,8 +3,8 @@ import { useLogin } from "./useLogin";
 import LoginSpinner from "./LoginSpinner";
 
 function LoginLayout() {
-    const [email, setEmail] = useState("demo@project.com");
-    const [password, setPassword] = useState("demo");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const { login, loggingIn } = useLogin();
 

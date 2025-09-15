@@ -29,6 +29,14 @@ Managing stock manually can lead to mistakes, expired medicines and financial lo
 
 It's designed to simplfy stock management and reduce wastage, helping medical shops operate smoothly.
 
+## Demo Access 
+To explore the functionality of the application, you can log in using the following demo account credentials:
+
+**Email:** demo@project.com  
+**Password:** demo
+
+This account is for demonstration purposes only and does not contain any sensitive information.
+
 ## Sreenshots 
 
 Here are the screenshots of project in action
@@ -36,14 +44,14 @@ Here are the screenshots of project in action
 ### Home Page
 ![Home Page](./src/assets/HomePage.png)
 
-## Dashboard
+### Dashboard
 ![Dashboard Page](./src/assets/Dashboard.png)
 
-## Add Stock
+### Add Stock
 ![Add stock Page](./src/assets/AddStock.png)
 
-## Pending Orders
+### Pending Orders
 ![Pending Orders Page](./src/assets/PendingOrders.png)
 
-## Returns Page
+### Returns Page
 ![Returns Page](./src/assets/ReturnsPage.png)
