@@ -32,8 +32,8 @@ It's designed to simplfy stock management and reduce wastage, helping medical sh
 ## Demo Access 
 To explore the functionality of the application, you can log in using the following demo account credentials:
 
-**Email:** demo@project.com  
-**Password:** demo
+**Email:** project@demo.com  
+**Password:** demoProject123
 
 This account is for demonstration purposes only and does not contain any sensitive information.
 
