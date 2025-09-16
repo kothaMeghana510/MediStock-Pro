@@ -1,5 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
-// import { getReturnStock } from "../services/apiReturnStocks";
 import ReturnItem from "./ReturnItem";
 import EmptyReturns from "./EmptyReturns";
 import useReturnStocks from "./useReturnStocks";

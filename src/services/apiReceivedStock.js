@@ -50,7 +50,6 @@ export async function stockAfterDate(startDate) {
     .from('receivedStock')
     .select("*")
     .gte("created_at", isoDate)
-    // .lte('created_at', getToday({end: true}))
 
     if(error) {
         console.log(error) ;

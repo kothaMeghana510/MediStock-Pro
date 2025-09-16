@@ -33,15 +33,3 @@ function ReturnItem({
 }
 
 export default ReturnItem;
-
-
-{/* <div className="bg-white px-4 py-2 rounded-2xl shadow-md border-l-4 border-cyan-500 mb-4">
-            <div className="flex flex-row gap-10">
-                <h1 className="font-semibold text-xl uppercase text-gray-800">{medicineName}</h1>
-                <p className="font-normal ml-auto text-lg flex gap-2"><span className="font-semibold">Received Quantity:</span> {receivedQuantity}</p>
-                <p className="font-normal ml-auto text-lg "><span className="font-semibold">Return Quantity: </span>{returnQuantity}</p>
-            </div>
-            <p className="text-lg text-gray-500"><span className="text-lg font-semibold my-6">Reason: </span>{returnReason}</p>
-            <p className="text-lg text-gray-500"><span className="text-lg font-semibold my-6">Return Date: </span>{formattedDate}</p>
-            
-        </div> */}

@@ -25,7 +25,6 @@ console.log(returnStock);
 
   
 function handleReturn(data) {
-      console.log(data);
       const finalReturnStock = {
         returnStockId: returnStock.id,
         medicineName: returnStock.medicineName,

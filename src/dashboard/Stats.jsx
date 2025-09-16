@@ -4,7 +4,6 @@ import useDashboardData from "./useDashboardData";
 
 function Stats() {
     const { receivedData, pendingData, returnedData } = useDashboardData();
-    console.log(returnedData);
 
     const checkedReceivedData = receivedData ?? [];
     const checkedPendingData = pendingData ?? [];
